@@ -1,0 +1,39 @@
+{
+  "name": "cordova-plugin-file-openerpanin",
+  "version": "1.0.0",
+  "description": "A File Opener Plugin for Cordova. (The Original Version)",
+  "cordova": {
+    "id": "cordova-plugin-file-openerpanin",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8",
+      "windows"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajidwip/cordova-plugin-file-openerpanin.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp8",
+    "cordova-windows"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": {
+    "name": "ajidwip6@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajidwip/cordova-plugin-file-openerpanin/issues"
+  },
+  "homepage": "https://github.com/ajidwip/cordova-plugin-file-openerpanin#readme"
+}

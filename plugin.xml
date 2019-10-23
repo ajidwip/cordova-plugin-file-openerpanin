@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-file-openerpanin" version="2.0.19">
+
+    <name>File Opener Panin</name>
+    <description>A File Opener Plugin for Cordova. (The Original Version)</description>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/plugins.FileOpenerPanin.js" name="FileOpenerPanin">
+        <clobbers target="cordova.plugins.fileOpenerPanin" />
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+        <source-file src="src/android/io/github/ajidwip/cordova/plugins/fileopenerpanin/FileOpenerPanin.java" target-dir="src/io/github/ajidwip/cordova/plugins/fileopenerpanin" />
+        <source-file src="src/android/io/github/ajidwip/cordova/plugins/fileopenerpanin/FileProvider.java" target-dir="src/io/github/ajidwip/cordova/plugins/fileopenerpanin" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FileOpenerPanin">
+                <param name="android-package" value="io.github.panin.cordova.plugins.fileopenerpanin.FileOpenerPanin" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+          <provider android:name="io.github.panin.cordova.plugins.fileopenerpanin.FileProvider" android:authorities="${applicationId}.opener.provider" android:exported="false" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/opener_paths" />
+          </provider>
+        </config-file>
+        <source-file src="src/android/res/xml/opener_paths.xml" target-dir="res/xml" />
+        <framework src="com.android.support:support-v4:+" />
+    </platform>
+
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="FileOpenerPanin">
+                <param name="ios-package" value="FileOpenerPanin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/FileOpenerPanin.m" />
+        <header-file src="src/ios/FileOpenerPanin.h" />
+    </platform>
+
+	<!-- WP8 -->
+	<platform name="wp8">
+		<config-file target="config.xml" parent="/*">
+		  <feature name="FileOpenerPanin">
+			<param name="wp-package" value="FileOpenerPanin" />
+		  </feature>
+		</config-file>
+		<source-file src="src/wp8/FileOpenerPanin.cs" />
+	</platform>
+
+	<!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/fileOpenerPaninProxy.js" name="fileOpenerPaninProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
+</plugin>
