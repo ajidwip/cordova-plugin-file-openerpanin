@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-file-openerpanin" version="2.0.19">
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-file-openerpanin" version="2.1.0">
 
     <name>File Opener Panin</name>
     <description>A File Opener Plugin for Cordova. (The Original Version)</description>
@@ -15,8 +15,8 @@
 
     <!-- Android -->
     <platform name="android">
-        <source-file src="src/android/io/github/ajidwip/cordova/plugins/fileopenerpanin/FileOpenerPanin.java" target-dir="src/io/github/ajidwip/cordova/plugins/fileopenerpanin" />
-        <source-file src="src/android/io/github/ajidwip/cordova/plugins/fileopenerpanin/FileProvider.java" target-dir="src/io/github/ajidwip/cordova/plugins/fileopenerpanin" />
+        <source-file src="src/android/io/github/panin/cordova/plugins/fileopenerpanin/FileOpenerPanin.java" target-dir="src/io/github/panin/cordova/plugins/fileopenerpanin" />
+        <source-file src="src/android/io/github/panin/cordova/plugins/fileopenerpanin/FileProvider.java" target-dir="src/io/github/panin/cordova/plugins/fileopenerpanin" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FileOpenerPanin">
                 <param name="android-package" value="io.github.panin.cordova.plugins.fileopenerpanin.FileOpenerPanin" />
